@@ -3,19 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulation Studio</title>
+<title>Simulation Studio — Physics-Based Video Generator</title>
 <style>
-body { font-family: -apple-system, system-ui, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
-h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-a { color: #0066cc; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #e0e0e0; background: #06060E; line-height: 1.6; }
+a { color: #7c8aff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.hero {
+    text-align: center;
+    padding: 100px 20px 80px;
+    background: linear-gradient(180deg, #0d0d1a 0%, #06060E 100%);
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #7c8aff, #ff6b9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero p {
+    font-size: 1.25rem;
+    color: #999;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+.badge {
+    display: inline-block;
+    background: rgba(124, 138, 255, 0.15);
+    border: 1px solid rgba(124, 138, 255, 0.3);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #7c8aff;
+}
+
+.features {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.feature {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 30px;
+}
+.feature h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+.feature p {
+    font-size: 0.95rem;
+    color: #888;
+}
+
+.how-it-works {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+}
+.step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+.step-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c8aff, #ff6b9d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+}
+.step-text h4 { color: #fff; margin-bottom: 4px; }
+.step-text p { color: #888; font-size: 0.95rem; }
+
+.examples {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+.examples h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #fff;
+}
+.examples .subtitle {
+    color: #888;
+    margin-bottom: 40px;
+}
+.example-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.example-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+.example-card .icon { font-size: 2rem; margin-bottom: 12px; }
+.example-card h4 { color: #fff; margin-bottom: 4px; }
+.example-card p { color: #888; font-size: 0.85rem; }
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #555;
+    font-size: 0.85rem;
+}
+footer a { color: #777; }
 </style>
 </head>
 <body>
-<h1>Simulation Studio</h1>
-<p>A creative tool that generates physics-based visual simulations and publishes them as short-form videos.</p>
-<ul>
-<li><a href="terms.html">Terms of Service</a></li>
-<li><a href="privacy.html">Privacy Policy</a></li>
-</ul>
+
+<div class="hero">
+    <h1>Simulation Studio</h1>
+    <p>Generate satisfying physics-based simulations and publish them as short-form videos to TikTok and YouTube.</p>
+    <span class="badge">AI-Powered Video Generation</span>
+</div>
+
+<div class="features">
+    <div class="feature">
+        <h3>Physics Engine</h3>
+        <p>Real-time particle systems, fluid dynamics, rigid body collisions, and procedural animations running at 60fps.</p>
+    </div>
+    <div class="feature">
+        <h3>One-Click Export</h3>
+        <p>Export simulations as high-quality MP4 videos optimized for vertical short-form content (1080x1920).</p>
+    </div>
+    <div class="feature">
+        <h3>Direct Publishing</h3>
+        <p>Upload directly to TikTok and YouTube with proper metadata, hashtags, and AI-generated content labels.</p>
+    </div>
+</div>
+
+<div class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+                <h4>Generate</h4>
+                <p>Create a physics-based simulation — particle sorting, chain reactions, fluid flows, or any satisfying visual concept.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+                <h4>Export</h4>
+                <p>Record the simulation as a high-quality MP4 video, optimized for mobile vertical viewing.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+                <h4>Publish</h4>
+                <p>Upload to TikTok or YouTube directly from the command line with title, description, and privacy settings.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="examples">
+    <h2>Simulation Types</h2>
+    <p class="subtitle">Endlessly satisfying, algorithmically generated</p>
+    <div class="example-grid">
+        <div class="example-card">
+            <div class="icon">&#9679;</div>
+            <h4>Ball Sorting</h4>
+            <p>Colored balls finding their matching containers through physics</p>
+        </div>
+        <div class="example-card">
+            <div class="icon">&#9733;</div>
+            <h4>Chain Reactions</h4>
+            <p>Domino-style cascading effects with perfect timing</p>
+        </div>
+        <div class="example-card">
+            <div class="icon">&#9650;</div>
+            <h4>Particle Systems</h4>
+            <p>Thousands of particles forming patterns and shapes</p>
+        </div>
+        <div class="example-card">
+            <div class="icon">&#8776;</div>
+            <h4>Fluid Dynamics</h4>
+            <p>Liquid simulations with realistic flow and color mixing</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Simulation Studio &middot; <a href="terms.html">Terms of Service</a> &middot; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
 </body>
 </html>
